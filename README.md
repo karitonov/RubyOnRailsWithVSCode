@@ -1,0 +1,2 @@
+# RubyOnRailsWithVSCode
+Ruby on Railsの開発環境をVSCode上で構築、SolargraphやYARDもインストール
