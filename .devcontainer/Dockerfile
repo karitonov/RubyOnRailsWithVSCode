@@ -19,7 +19,10 @@ RUN apt-get autoremove -y \
 
 RUN npm install -g yarn heroku
 
-RUN echo "vscode ALL=NOPASSWD: ALL" >> /etc/sudoers
+# RUN echo "vscode ALL=NOPASSWD: ALL" >> /etc/sudoers
+ENV USER vscode
+RUN gpasswd -a ${USER} sudo
+RUN echo "${USER}:pass" | chpasswd
 
 ENV SHELL /bin/bash
 
