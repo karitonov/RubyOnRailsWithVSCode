@@ -1,0 +1,38 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.231.6/containers/ruby-rails-postgres
+// Update the VARIANT arg in docker-compose.yml to pick a Ruby version
+{
+  "name": "Ruby on Rails",
+  "dockerComposeFile": "docker-compose.vscode.yml",
+  "workspaceFolder": "/workspace",
+  "service": "app",
+  "remoteUser": "vscode",
+  "extensions": [
+    "rebornix.Ruby",
+    "castwide.solargraph",
+    "kaiwood.endwise",
+    "hridoy.rails-snippets",
+    "aki77.rails-db-schema",
+    "jduponchelle.rainbow-end"
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "[ruby]": {
+      "editor.defaultFormatter": "castwide.solargraph",
+    },
+    "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
+    "solargraph.diagnostics": true,
+    "solargraph.autoformat": true,
+    "solargraph.completion": true,
+    "solargraph.definitions": true,
+    "solargraph.formatting": true,
+    "solargraph.hover": true,
+    "solargraph.references": true,
+    "solargraph.useBundler": false,
+    "solargraph.symbols": true,
+    "solargraph.rename": true,
+    "solargraph.logLevel": "debug",
+    "ruby.useBundler": true,
+    "ruby.pathToBundler": "/usr/local/bin/bundle"
+  },  
+}
